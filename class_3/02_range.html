@@ -6,10 +6,96 @@
     <title>repl.it</title>
 		<link rel="stylesheet" href="css/reset.css">
     <style>
-			
+			.wrap{
+        width: 1200px;
+        background: #eee;
+        margin: 0 auto; /*with값이 있는 block요소에 가운데 정렬 시킴 */
+        color: #fff;
+        font-size: 20px;
+        font-weight: bold;
+      }
+      .header{
+        height: 100px;
+        background: #246c84;
+        text-align: center;
+        line-height: 100px;
+      }
+      .container{
+        display: flex;
+        height: 500px;
+      }
+      .content{
+        background: #cd3637;
+        flex: 1;
+      }
+      .aside{
+        background: #f98903;
+        width: 200px;
+      }
+      .footer{
+        height: 100px;
+        background: #000;
+        text-align: center;
+        line-height: 100px;
+      }
+
+      @media all and (max-width:1200px){
+        .wrap{
+          width: 1024px;
+        }
+      }
+      @media all and (max-width:1024px){
+        .wrap{
+          width: 768px;
+        }
+        .container{
+          display: block;
+          height: auto;
+        }
+        .content{
+          height: 400px;
+        }
+        .aside{
+          width: auto;
+          height: 100px;
+        }
+      }
+      @media all and (max-width:768px){
+        .wrap{
+          width: auto;
+        }
+        .content{
+          line-height: 400px;
+          text-align: center;
+        }
+        .aside{
+          line-height: 100px;
+          text-align: center;
+        }
+      }
 		</style>
   </head>
   <body>
-    
+    <div class="wrap">
+      <div class="header">
+        header
+      </div>
+      <!-- header -->
+
+      <div class="container">
+        <div class="content">
+          content
+        </div>
+        <div class="aside">
+          aside
+        </div>
+      </div>
+      <!-- container -->
+
+      <div class="footer">
+        footer
+      </div>
+      <!-- footer -->
+    </div>
   </body>
 </html>
