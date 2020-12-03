@@ -13,6 +13,68 @@
 				color:#fff;
 				padding:20px;
 			}
+			/* transition 효과 */
+			/* .box{
+				width: 50px;
+				height: 50px;
+				background: red;
+				transition: all 1s;
+			}
+			.box:hover{
+				width: 100px;
+				height: 100px;
+				margin-left: 20px;
+				background: blue;
+			} */
+
+			/* animation 효과 */
+			/* .box{
+				width: 50px;
+				height: 50px;
+				background: red;
+				animation: jungle_ani 3s infinite;
+			}
+			@keyframes jungle_ani{
+				0%{width: 50px; height: 50px;}
+				50%{width: 100px; height: 100px; margin-left: 50px;
+				 transform: rotate(180deg);}
+				100%{width: 50px; height: 50px;}
+			} */
+
+			/* transform 효과 */
+			/* .box{
+				position: absolute;
+				top: 200px;
+				left: 100px;
+				width: 50px;
+				height: 50px;
+				background: red;
+				transition: transform 0.5s;
+			}
+
+			.box:hover{
+				transform: scale(2) rotate(180deg);
+			} */
+			.section{
+				text-align: center;
+				padding-top: 50px;
+				height: 200px;
+			}
+			.box{
+				width: 100px;
+				height: 100px;
+				background: #1ba160;
+				display: inline-block;
+				vertical-align: middle;
+				transition: all 1s;
+			}
+			.box + .box{
+				margin-left: 50px;
+			}
+			.box:hover{
+				transform: scale(2) rotate(45deg);
+				background: #121260;
+			}
 		</style>
 
   </head>
@@ -27,9 +89,10 @@
     </div>
 		<div class="container">
 				<div class="section">
-					
+					<div class="box"></div>
+					<div class="box"></div>
+					<div class="box"></div>
 				</div>
-				
 		</div>
   </body>
 </html>

@@ -12,7 +12,59 @@
 				background:#333;
 				color:#fff;
 				padding:20px;
+				text-align: center;
 			}
+			.header h1{
+				display: inline-block;
+				margin-right: 100px;
+			}
+			.header .nav{
+				display: inline-block;
+			}
+
+			/* float를 활용한 좌우배치 */
+			/* .container .aside{
+				width: 200px;
+				background: #23a8f2;
+				float: left;
+			}
+			.container .section{
+				background: #ffdc3e;
+				width: calc(100% - 200px);
+				float: right;
+			} */
+
+			/* table을 활용한 좌우배치 */
+			/* .container{
+				display: table;
+				width: 100%;
+
+			}
+			.container .aside{
+				background: #23a8f2;
+				width: 200px;
+				display: table-cell;
+			}
+			.container .section{
+				background: #ffdc3e;
+				display: table-cell;
+			} */
+
+			/* flex를 활용한 좌우배치 */
+			.container{
+				display: flex;
+				width: 1200px;
+				margin: 0 auto;
+			}
+			.container .aside{
+				background: #23a8f2;
+				width: 300px;
+			}
+			.container .section{
+				background: #ffdc3e;
+				flex: 1;
+			}
+
 		</style>
 
   </head>

@@ -15,6 +15,99 @@
 			}
 
 			.container{width:800px; margin:0 auto;text-align:center}
+
+			/* .section.box ul li{
+				display: inline-block;
+			} */
+			
+			/* li중 첫번째 선택 */
+			/* .section.box ul li:first-child{
+				color: red;
+			}  */
+			
+			/* li중 두번째 선택 */
+			/* .section.box ul li:nth-child(2){
+				color: blue;
+			} */
+
+			/* ul 하위 모든 선택자 */
+			/* .section.box ul  *{
+				border: 1px solid #333;
+			} */
+
+			/* 자식 선택자 */
+			/* .section.box > ul {
+				border: 4px solid green;
+			} */
+
+			/* 특정 태그 뒤에 해당 태그가 인접한 경우 선택 */
+			/* .section.box ul li + li{
+				margin-left: 50px;
+			} */
+
+			/* .section.box ul li:before{
+				content: '';
+				display: inline-block;
+				width: 3px;
+				height: 3px;
+				background: red;
+				vertical-align: middle;
+				margin-top: -1px;
+			}
+			.section.box ul li:after{
+				content: '%';
+			}
+
+			.section.box ul:hover{
+				background: #999;
+			}
+			.section.link div a:hover{
+				font-weight: bold;
+			} */
+
+			/* box */
+			.section.box .box{
+				width: 200px;
+				height: 100px;
+				background: #ff0000;
+				float: left;
+				list-style: none;
+				line-height: 100px;
+			}
+			.section.box .box + .box{
+				margin-left: 100px;
+			}
+			.section.box .box:hover{
+				background: green;
+			}
+			.section.box .box:nth-child(2){
+				background: #000;
+				color: white;
+			}
+			.section.box ul{
+				padding: 0;
+			}
+			.section.box:after{
+				content: '';
+				display: block;
+				clear: both;
+			}
+
+			/* link */
+			.section.link > div{
+				display: inline-block;
+				width: 50px;
+				height: 50px;
+				border: 5px solid #ff0000;
+			}
+
+			/* text */
+			.section.txt{
+				background: #eee;
+				text-align: left;
+				padding: 20px;
+				line-height: 30px; /*행간*/
+			}
 		</style>
 
   </head>
@@ -26,13 +119,13 @@
 				<div class="section box">
 					<ul>
 						<li class="box">
-							<a href="#">box1</a>
+							box1
 						</li>
 						<li class="box">
-							<a href="#">box2</a>
+							box2
 						</li>
 						<li class="box">
-							<a href="#">box3</a>
+							box3
 						</li>
 					</ul>
 				</div>
