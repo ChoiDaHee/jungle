@@ -10,24 +10,25 @@
     <script src="js/jquery.bxslider.min.js"></script>
 		<script>
       $(function(){
+        // $(".slider").bxSlider({
+        //   pager:false, //하단 도트
+        //   controls:false, //좌우 버튼
+        //   auto:true, //자동 슬라이드
+        //   pause:3000, //자동 슬라이드 인터벌
+        //   speed:2000, //슬라이드 속도
+        //   mode:"fade" //슬라이드 애니메이션 타입
+        // });
+
+        // $("선택자").플러그인정의함수();
+        
+
+        //bxslider 커스터마이징 하는 방법
         $(".slider").bxSlider({
-          pager:false, //하단 도트
-          controls:false, //좌우 버튼
-          auto:true, //자동 슬라이드
-          pause:3000, //자동 슬라이드 인터벌
-          speed:2000, //슬라이드 속도
-          mode:"fade" //슬라이드 애니메이션 타입
-        });
-
-        $("선택자").플러그인정의함수();
-
-      //   $(".slider").bxSlider({
-			// onSlideAfter:function($slideElement, oldIndex, newIndex){
-				
-			// 	$(".slider > div").removeClass("on");
-			// 	$slideElement.addClass("on");
-			//}
-		//}); //bxSlider 플러그인 호출하는 방법;
+          onSlideAfter:function($slideElement, oldIndex, newIndex){
+            $(".slider > div").removeClass("on");
+            $slideElement.addClass("on");
+			}
+		}); //bxSlider 플러그인 호출하는 방법;
       });
     </script>
     <style>
@@ -59,7 +60,7 @@
   </head>
   <body>
     <div class="slider">
-      <div class="slider_1"><span>첫번째 슬라이드</span></div>
+      <div class="slider_1 on"><span>첫번째 슬라이드</span></div>
       <div class="slider_2"><span>두번째 슬라이드</span></div>
       <div class="slider_3"><span>세번째 슬라이드</span></div>
     </div>

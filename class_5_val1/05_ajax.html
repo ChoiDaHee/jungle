@@ -40,10 +40,19 @@
 					$(this).hide();//버튼 지우기
 					
 					//ajax를 통해 json파일 가져오기
+					// $.ajax({
+					// 	url:"js/data.json",
+					// 	dataType:"json",
+					// 	success: function(result){
+					// 		loadData = result.seatInfo;
+					// 		loadSuccessFn();
+					// 	}
+					// });
+
 					$.ajax({
 						url:"js/data.json",
 						dataType:"json",
-						success: function(result){
+						success:function(result){
 							loadData = result.seatInfo;
 							loadSuccessFn();
 						}
@@ -52,10 +61,17 @@
 
 				//json데이터 가져온 이후 실행되는 함수
 				function loadSuccessFn(){
-					for(var i=0; i<loadData.length; i++){
+					// for(var i=0; i<loadData.length; i++){
+					// 	var n = loadData[i].name;
+					// 	var p = loadData[i].price;
+					// 	console.log(n, p);
+					// }
+					// console.log(loadData[0].price)
+					for(var i = 0; i <loadData.length; i++){
 						var n = loadData[i].name;
 						var p = loadData[i].price;
-						console.log(n, p);
+						console.log(n, p)
+						$(".section.list > ul").append('<li class="unit" data-price="'+p+'"><a href="#">'+n+'</a></li>')
 					}
 				}
 			})

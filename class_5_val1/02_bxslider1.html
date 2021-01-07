@@ -15,12 +15,12 @@
 		$(function () {
 			// 상단 비주얼 배너
 			$(".section.visual > ul").bxSlider({
-				auto:true,//자동 슬라이드
-				pause:7000,//자동 슬라이드 인터벌
-				//speed:2000,//슬라이드 스피드
-				//controls:false,//좌우 버튼 유무
-				//pager:false,//페이저 버튼 유무
-				//mode:"fade",//전환 효과
+				// auto:true,//자동 슬라이드
+				// pause:7000,//자동 슬라이드 인터벌
+				// //speed:2000,//슬라이드 스피드
+				// //controls:false,//좌우 버튼 유무
+				// //pager:false,//페이저 버튼 유무
+				// //mode:"fade",//전환 효과
 				onSlideAfter:function($slideElement, oldIndex, newIndex){
 					$(".section.visual ul > li").removeClass("on");
 					$slideElement.addClass("on");
@@ -29,12 +29,12 @@
 
 			// 하단 상품 3개씩 정렬한 배너
 			$(".section.box > ul").bxSlider({
-				minSlides:3,
-				maxSlides:3,
-				moveSlides:3,
-				slideWidth:"330px"
+				minSlides:3, //표현갯수
+				maxSlides:3, //표현갯수
+				moveSlides:3, //이동갯수
+				slideWidth:"350px"
 			});
-		})
+		})	
 
 	</script>
 
