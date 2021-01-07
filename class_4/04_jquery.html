@@ -14,13 +14,43 @@
 			}
 		</style>
 		<script>
-			// thml 로드가 다 되고 난 이후에 실행되는 제이쿼리
+			// html 로드가 다 되고 난 이후에 실행되는 제이쿼리 함수
 			$(function(){
-				//$(".btn").find("span").css({"border":"1px solid #000"})
-				$(".btn").eq(1).addClass("on");
+				/////////선택자
+				// $(".btn > span").css({
+				// 	"border":"1px solid #000"
+				// })
+				$(".btn").eq(2).css({
+					"border":"3px solid red"
+				})
+				$(".btn").next().css({
+					"color":"#F69834"
+				})
+				$(".btn").parent().css({
+					"background":"#333"
+				})
+				$(".btn").find("span").css({
+					"font-weight":"bold"
+				})
+
+
+				///////class
+				///addClass(추가), removeClass(제거), toggleClass(on&off)
+				// $(".btn").eq(0).addClass("on");
 				$(".btn").eq(3).removeClass("on");
-				$(".btn").eq(1).toggleClass("on");
-			})
+
+				$(".btn").click(function(){
+					// $(this).addClass("on");
+					$(this).toggleClass("on");
+				})
+			});
+
+			// $(function(){
+			// 	//$(".btn").find("span").css({"border":"1px solid #000"})
+			// 	$(".btn").eq(1).addClass("on");
+			// 	$(".btn").eq(3).removeClass("on");
+			// 	$(".btn").eq(1).toggleClass("on");
+			// })
 		</script>
   </head>
   <body>

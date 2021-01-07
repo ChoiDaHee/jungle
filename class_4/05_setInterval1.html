@@ -21,7 +21,7 @@
 				position: relative;
 			}
 			.visual .unit{
-				opacity: 0;
+				opacity: 0; /*투명도*/
 				position: absolute;
 				top:30px;
 				left:0;
@@ -47,11 +47,11 @@
 			$(function(){
 				var num = 0;
 				setInterval(function(){
-					$(".visual .unit").removeClass("on");
-					$(".visual .unit").eq(num).addClass("on");
+					$(".visual .unit").removeClass("on"); //초기와
+					$(".visual .unit").eq(num).addClass("on"); //선택한 태그에 클래스 추가
 					console.log(num)
-					num++;
-					if(num == 3){
+					num++; //1씩 증가
+					if(num == 4){
 						num = 0;
 					}
 					
@@ -83,6 +83,11 @@
 					</div>
 					<div class="unit">
 						<strong class="txt_tit">세번째 문구</strong>
+						<p class="txt_subs_1">세번째 문구의 애니메이션 예제 입니다.</p>
+						<p class="txt_subs_2">세번째 문구의 애니메이션 예제 입니다.</p>
+					</div>
+					<div class="unit">
+						<strong class="txt_tit">네번째 문구</strong>
 						<p class="txt_subs_1">세번째 문구의 애니메이션 예제 입니다.</p>
 						<p class="txt_subs_2">세번째 문구의 애니메이션 예제 입니다.</p>
 					</div>
