@@ -1,3 +1,11 @@
+.section{
+	display: none;
+}
+.section.on{
+	display: block;
+}
+
+/* 초기화면 */
 .box_intro{
 	padding:30px 0;
 	text-align: center;
@@ -9,9 +17,10 @@
 	height:100px;
 	width:200px;
 	font-size:20px;
-	cursor: pointer;
+	cursor: pointer; /*손가락 모양*/
 }
 
+/* 자리선택 */
 .section.reservation{
 	width:590px;
 	margin:0 auto;
@@ -48,12 +57,14 @@
 .section.reservation .unit button[disabled]:hover
 {
   background:#BABABA url(../img/img_disabled.png) no-repeat;
-  background-size:100% 100%;
-  text-indent: -9999px;
+  /* background-size:100% 100%; */
+  text-indent: -9999px; /*텍스트 가림*/
   cursor:default;
 }
+
+/* 선택된 자리 */
 .section.reservation .unit button.select{
-	background: #FF5F40;
+  background: #FF5F40;
   color:#fff;
   font-size:20px;
 }
@@ -62,6 +73,8 @@
   background: #de472a;
 }
 
+
+/* */
 .section.reservation .box_info{
 	padding:15px;
 	background: #000;
