@@ -27,7 +27,7 @@
 	opacity:1;
 }
 
-
+/* 혼자 연습용 */
 .box_counter1 {
 	background: url(../images/bg.jpg);
 	height: 100vh;
@@ -51,4 +51,8 @@
 	display: inline-block;
 	font-size: 20px;
 	line-height: 50px;
+}
+
+.box_btn1 > a:hover{
+	opacity: 1;
 }
