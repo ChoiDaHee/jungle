@@ -114,7 +114,7 @@
         width: auto;
         border: none;
         font-size: 15px;
-        height: ;
+        height: 100%;
     }
     .chat_area{
         height: calc(100% - 135px);
