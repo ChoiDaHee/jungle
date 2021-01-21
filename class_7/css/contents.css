@@ -23,9 +23,11 @@
     transform: translateX(-10px);
     transition: all 0.3s;
 }
+
+/* 말풍선 활성화시 디자인 */
 .chat_area .item.on{
     opacity: 1;
-    transform: translateX(0); !important;
+    transform: translateX(0) !important;
 }
 .chat_area .item + .item{
     margin-top: 15px;
