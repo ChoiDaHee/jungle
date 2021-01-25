@@ -2,7 +2,14 @@
 
 }
 .section.visual{
-
+    min-width: 1200px;
+    position: relative;
+}
+.section.visual::after{
+    content: "";
+    display: block;
+    height: 3px;
+    background: url(../img/bg_visual_line.jpg) no-repeat;
 }
 .section.visual .slider{
 
@@ -130,7 +137,7 @@
 
 /* section.banner - 메인 컨텐츠 */
 .section.banner{
-    margin-top: 50px;
+    margin: 50px 0 170px;
 }
 .section.banner .inner{
     height: 706px;
@@ -199,4 +206,53 @@
     display: inline-block;
     margin-left: 7px;
 }
+
+
+@media all and (max-width: 1200px){
+    .section.visual{
+        min-width: auto;
+    }
+}
+
+@media all and (max-width: 1024px){
+    .section.visual .slider .unit{
+        height: auto;
+    }
+    .section.visual .slider .unit img{
+        position: static;
+        transform: translateX(0);
+        width: 100%;
+    }
+    .section.visual .bx-viewport{
+        height: auto !important;
+    }
+    .section.visual .slider .inner{
+        display: none;
+    }
+
+    .section.banner .inner > ul > li{
+        width: 100% !important;
+        height: auto !important;
+        position: static;
+        padding-bottom: 400px;
+        background-position: center bottom !important;
+    }
+    .section.banner .inner > ul > li.unit_2,
+    .section.banner .inner > ul > li.unit_3{
+        padding-bottom: 320px;
+    }
+    .section.banner .inner{
+        height: auto;
+        padding: 0 20px;
+    }
+    .section.banner .inner > ul > li + li{
+        margin-top:20px;
+    }
+    .section.banner .inner > ul > li.unit_2 > p,
+    .section.banner .inner > ul > li.unit_3 > p{
+        padding-right: 0;
+    }   
+}
+
+
 

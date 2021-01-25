@@ -6,7 +6,7 @@ html{
 @import url(//fonts.googleapis.com/earlyaccess/nanummyeongjo.css);
 
 .wrap{
-
+    min-width: 1200px;
 }
 
 /* common */
@@ -94,5 +94,92 @@ html{
 
 /* footer */
 .footer{
+    background: #333;
+    padding: 40px 0 25px;
+    color: #777;
+    text-align: center;
+    font-size: 13px;
+    line-height: 23px;
+}
+.footer .info{
+    margin-bottom: 20px;
+}
+.footer .info > span{
+    margin: 0 15px;
+}
 
+
+@media all and (max-width: 1024px){
+    .header{
+        /* height: 89px; */
+    }
+    .header .gnb{
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: #fff;
+        height: 100vh;
+        z-index: 100;
+        width: 300px;
+        padding: 20px;
+        box-sizing: border-box;
+        transform: translateX(-450px);
+        transition: transform 0.5s;
+    }
+    .header .gnb.on{
+        transform: translateX(0px);
+    }
+    .header .gnb .img-logo-m{
+        display: block;
+        width: 197px;
+    }
+    .header .gnb .navi{
+        margin-top: 45px;
+    }
+    .header .gnb .navi > li{
+        float: none;
+        width: auto;
+        display: block;
+    }
+    .header .gnb .navi > li > a{
+        text-align: left;
+        border-bottom: 1px solid #ebeeef;
+        display: block;
+        width: auto;
+        height: 60px;
+        line-height: 60px;
+    }
+    .header .gnb .btn-gnb-close{
+        display: block;
+        width: 50px;
+        height: 50px;
+        text-indent: -9999px;
+        border: 0;
+        background: #fff url(../img/ico_nav_close.png) no-repeat center center;
+        position: absolute;
+        top: 0;
+        left: 400px;
+    }
+    .header .btn-gnb-ham{
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 89px;
+        width: 89px;
+        text-indent: -9999px;
+        border: 0;
+        background: url(../img/ico_nav_ham.png) no-repeat center center;
+    }
+}
+
+@media all and (max-width: 1200px){
+    .wrap{
+        min-width: auto;
+    }
+
+    /* common */
+    .inner{
+        width: auto;
+    }
 }
