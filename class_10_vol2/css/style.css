@@ -31,7 +31,8 @@ body{
     background:#d5dee5;
 }
 .inner{
-    min-width: 1024px;
+    width: 1024px;
+    margin: 0 auto;
 }
 
 /****** main ******/
@@ -87,6 +88,169 @@ body{
     opacity: 1;
 }
 /* 오브젝트 */
-#section0 .ico{}
-#section0 .ico.ico-1{}
-#section0 .ico.ico-2{}
+#section0 .ico{
+    display: block;
+    width: 200px;
+    height: 200px;
+    background: url(../img/ico_01.png) no-repeat center center;
+    background-size: auto 100%;
+    position: absolute;
+    left: 50%;
+    
+
+}
+#section0 .ico.ico-1{
+    top: 50%;
+    margin: -310px 0 0 330px;
+}
+#section0 .ico.ico-2{
+    width: 556px;
+    height: 376px;
+    background-image: url(../img/ico_02.png);
+    bottom: -220px;
+    margin-left: -890px;
+}
+
+/****** profile ******/
+#section1 .wrap-bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+#section1 .wrap-bg .bg{
+    height: 100px;
+    
+}
+
+/* 첫번째 배경 animation */
+#section1 .wrap-bg.select-1 .bg{
+    background: url(../img/section1_txt_0.png);
+    animation:ani-bg1 6s linear infinite;
+}
+@keyframes ani-bg1{
+    0%{background-position: 0 0;}
+    100%{background-position: -690px 0;}
+}
+#section1 .wrap-bg.select-1 .bg.reverse{
+    animation-name: ani-bg1-reverse;
+}
+@keyframes ani-bg1-reverse{
+    0%{background-position: 0 0;}
+    100%{background-position: 690px 0;}
+}
+/* 두번째 배경 animation */
+#section1 .wrap-bg.select-2 .bg{
+    background: url(../img/section1_txt_1.png);
+    animation:ani-bg2 6s linear infinite;
+}
+@keyframes ani-bg2{
+    0%{background-position: 0 0;}
+    100%{background-position: -634px 0;}
+}
+#section1 .wrap-bg.select-2 .bg.reverse{
+    animation-name: ani-bg2-reverse;
+}
+@keyframes ani-bg2-reverse{
+    0%{background-position: 0 0;}
+    100%{background-position: 634px 0;}
+}
+/* 세번째 배경 animation */
+#section1 .wrap-bg.select-3 .bg{
+    background: url(../img/section1_txt_2.png);
+    animation:ani-bg3 6s linear infinite;
+}
+@keyframes ani-bg3{
+    0%{background-position: 0 0;}
+    100%{background-position: -783px 0;}
+}
+#section1 .wrap-bg.select-3 .bg.reverse{
+    animation-name: ani-bg3-reverse;
+}
+@keyframes ani-bg3-reverse{
+    0%{background-position: 0 0;}
+    100%{background-position: 783px 0;}
+}
+
+#section1 .wrap-link{
+    text-align: center;
+    position: absolute;
+    left:0;
+    right: 0;
+    top: 50%;
+    margin-top:-40px
+}
+#section1 .wrap-link .unit{
+    display: inline-block;
+}
+#section1 .wrap-link .unit + .unit:before{
+    content: '';
+    display: inline-block;
+    width: 80px;
+    height: 5px;
+    background: #000;
+    margin: 0 20px;
+    /* vertical-align: middle; */
+}
+#section1 .wrap-link .unit a{
+    font-size: 80px;
+    font-weight: bold;
+    /* vertical-align: middle; */
+}
+#section1 .wrap-link .unit a:hover{
+    color: #fff;
+}
+
+/****** skill ******/
+/* 배경 */
+#section2 .wrap-wave{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+#section2 .wrap-wave .inner{
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+#section2 .wrap-wave .unit{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #98d3f3;
+    transition: transform 1s ease-in-out;
+    transform: translateY(100%);
+}
+#section2 .wrap-wave .unit .wave{}
+#section2 .wrap-wave .unit .num{}
+#section2 .wrap-wave .unit .num > strong{}
+/* 버튼영역 */
+#section2 .wrap-link{
+    text-align: right;
+    position: absolute;
+    bottom: 50px;
+    right: 150px;
+}
+#section2 .wrap-link .unit{}
+#section2 .wrap-link .unit > a{
+    font-size: 80px;
+    font-weight: bold;
+    color: #2d3a42;
+    height: 90px;
+    line-height: 90px;
+    overflow-y: hidden;
+}
+#section2 .wrap-link .unit > a:hover{
+    color: #fff;
+}
+
+
+
+
+
+
+

@@ -30,4 +30,17 @@ function init(){
     $("#section0").parallax({
         imageSrc:"img/bg_main.png"
     });
+
+    //profile
+    // 링크에 마우스를 올렸을때
+    $("#section1 .wrap-link .unit > a").mouseover(function(){
+        var _idx = $(this).parent().index() //순서(index) 찾기
+        var _class = "select-" + (_idx + 1); //"select-" 문자열에 위에서 찾은 순서(index)값 + 1 더하기
+        $("#section1 .wrap-bg").removeClass("select-1 select-2 select-3"); //초기화(모든 select클래스 삭제)
+        $("#section1 .wrap-bg").addClass(_class); //해당 select클래스 추가
+    })
+    // 링크에 마우스를 뺐을때
+    $("#section1 .wrap-link .unit > a").mouseout(function(){
+        $("#section1 .wrap-bg").removeClass("select-1 select-2 select-3"); //초기화(모든 select클래스 삭제)
+    });
 }

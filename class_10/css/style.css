@@ -230,6 +230,7 @@ body{
 }
 
 /* skill */
+/* 배경 */
 #section2 .wrap-wave{
     position: absolute;
     left: 0;
@@ -251,10 +252,49 @@ body{
     height: 100%;
     background: #98d3f3;
     transition: transform 1s ease-in-out;
-    transform: translateY(50%);
-}  
-#section2 .wrap-wave .unit .wave{}
-#section2 .wrap-wave .unit .num{} 
+    transform: translateY(calc(100% - 50px));
+} 
+
+#section2 .wrap-wave .unit .wave{
+    height: 50px;
+    background: #b6e4fb;
+}
+
+#section2 .wrap-wave .unit .wave::before,
+#section2 .wrap-wave .unit .wave::after{
+    content: "";
+    display: block;
+    width: 4800px;
+    height: 50px;
+    position: absolute;
+    top: -50px;
+    left: 0;
+    background: url(../img/bg_wave.png) 0 0;
+    background-size: 2400px 50px;
+    opacity: 0.1;
+}
+#section2 .wrap-wave .unit .wave::before{
+    animation: ani_wave1 5s linear infinite;
+}
+@keyframes ani_wave1{
+    0%{transform: translateX(-500px);}
+    100%{transform: translateX(-2900px);}
+}
+#section2 .wrap-wave .unit .wave::after{
+    animation: ani_wave2 7s linear infinite;
+}   
+@keyframes ani_wave2{
+    0%{transform: translateX(0px);}
+    100%{transform: translateX(-2400px);}
+}
+
+#section2 .wrap-wave .unit .num{
+    font-size: 80px;
+    color: #fff;
+    opacity: 0.5;
+    margin-left: 30px;
+    
+} 
 #section2 .wrap-wave .unit .num > strong{}
 /* 버튼영역 */
 #section2 .wrap-link{
@@ -274,11 +314,99 @@ body{
     line-height: 90px;
     overflow-y: hidden;
 }
+#section2 .wrap-link .unit > a:hover{
+    color: #fff;
+}
 
+/* portfolio */
+#section3 .wrap-photo .slick-slide{
+    padding: 0 10px;
+}
+#section3 .wrap-photo .slick-slide img{
+    width: 860px;
+    height: 520px;
+}
+#section3 .wrap-txt{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    margin-top: 224px;
+}
+#section3 .wrap-txt > ul{
+    position: relative;
+    height: 95px;
+    overflow: hidden;
+}
+#section3 .wrap-txt > ul > li{
+    font-size: 86px;
+    font-weight: bold;
+    position: absolute;
+    top: 95px;
+    width: 100%;
+    transition: top ;
+}
+#section3 .wrap-txt > ul > li.select{
+    top: 0;
+}
 
+/* 갤러리 위치시 커서 없앰 */
+#section3 .wrap-photo{
+    cursor: none;
+}
+#section3 .wrap-photo .cursor{
+    display: block;
+    width: 30px;
+    height:30px;
+    background: red;
+    border-radius: 100%;
+    position: absolute;
+    pointer-events: none; /*커서 클릭시 해당 오브젝트 무시*/
+    transform: scale(0);
+    transition: transform 0.2s;
+}
 
+#section3 .wrap-photo:hover .cursor{
+    transform: scale(1);
+}
+#section3 .wrap-photo:active .cursor{
+    transform: scale(2);
+}
 
+#section4{
 
+}
+#section4 .wrqp-typo{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -180px 0 0 -1150px;
+}
+#section4 .wrap-typo .wrap-typo-inner{
+    position: relative;
+}
+#section4 .wrap-input{
+    position: ;
+}
+#section4 .wrap-input > form{
 
+}
+#section4 .wrap-input > form .group{
+    position: relative;
+    margin-bottom: 45px;
+}
+#section4 .wrap-input > form .group > input{
+    font-size: 18px;
+    padding: 10px 0;
+    display: block;
+    width: 300px;
+    border: 0;
+    background-color: transparent; /*투명색*/
+    border-bottom: 1px solid #757575;
+    color: #fff;
+    outline: none;
+}
+#section4 .wrap-input > form .group .highlight{
 
-
+}
